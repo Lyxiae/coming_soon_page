@@ -1,0 +1,14 @@
+{
+  "name": "coming_soon_page",
+  "version": "1.0.0",
+  "description": "A simple front-end project",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/main.scss:style/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.27.0"
+  }
+}
