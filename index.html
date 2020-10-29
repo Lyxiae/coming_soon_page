@@ -27,6 +27,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="./js/utils.js" defer></script>
     <script src="./js/index.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
     <title>La Coop - Coming Soon !</title>
 
@@ -36,7 +37,7 @@
         <nav>
             <a href="index.html" class="nav-link">Accueil</a>
             <label class="switch">
-                <input type="checkbox">
+                <input type="checkbox" id="darkmode">
                 <span class="slider"></span>
             </label>
         </nav>
@@ -44,12 +45,13 @@
     <main>
         <div class="container">
             <div class="content-left">
-                <img class="main-logo" alt="Logo La Coop" src="img/la_coop.png"/>
+                <img class="main-logo lightver" alt="Logo La Coop" src="img/la_coop.png"/>
+                <img class="main-logo darkver" alt="Logo La Coop" src="img/la_coop_darkmode.png"/>
                 <div class="info-block">
                     <h1>On arrive bientôt !</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adispiscing elit. Sed amet arcu velit, sit et elementum. Consectetur sed at proin eu elementum lectus. Non in sed turpis in orna. Pellentesque aenean mi tempor, morbi facilisis adipiscing.</p>
                     <form>
-                        <input type="email" placeholder="Adresse email"/>
+                        <input type="email" id="email" placeholder="Adresse email"/>
                         <button>></button>
                     </form>
                 </div>

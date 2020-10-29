@@ -52,6 +52,12 @@ main .container .content-left {
 main .container .content-left .main-logo {
   width: 140px;
 }
+main .container .content-left .lightver {
+  display: block;
+}
+main .container .content-left .darkver {
+  display: none;
+}
 main .container .content-left .info-block {
   width: 70%;
   margin: 0 auto;
@@ -155,6 +161,135 @@ input:checked + .slider:before {
   -webkit-transform: translateX(28px);
   -ms-transform: translateX(28px);
   transform: translateX(28px);
+}
+
+@media (max-width: 1200px) {
+  main .container {
+    width: 800px;
+    height: 426px;
+  }
+  main .container .content-left {
+    width: 60%;
+  }
+  main .container .content-left .main-logo {
+    width: 90px;
+  }
+  main .container .content-left .info-block h1 {
+    font-size: 2.6rem;
+    line-height: 2.8rem;
+  }
+  main .container .content-left .info-block p {
+    font-size: 0.8rem;
+  }
+  main .container .content-right {
+    width: 40%;
+    height: auto;
+  }
+}
+@media (max-width: 992px) {
+  main .container {
+    width: 80%;
+    height: 650px;
+    flex-flow: row-reverse wrap;
+  }
+  main .container .content-left {
+    width: 100%;
+    height: 350px;
+    order: 2;
+    position: relative;
+  }
+  main .container .content-left .main-logo {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  main .container .content-left .info-block {
+    width: 80%;
+  }
+  main .container .content-left .info-block h1 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+  }
+  main .container .content-right {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    order: 1;
+  }
+}
+@media (max-width: 768px) {
+  main .container {
+    height: 500px;
+  }
+  main .container .content-left {
+    height: 300px;
+    padding: 30px 15px;
+  }
+  main .container .content-left .main-logo {
+    width: 80px;
+  }
+  main .container .content-left .info-block {
+    margin: 0 auto;
+  }
+  main .container .content-left .info-block h1 {
+    font-size: 1.4rem;
+    line-height: 120%;
+  }
+  main .container .content-left .info-block p {
+    font-size: 0.7rem;
+  }
+  main .container .content-left .info-block form {
+    margin-top: 10px;
+  }
+  main .container .content-right {
+    height: 200px;
+  }
+}
+.darkmode {
+  background: linear-gradient(90deg, #531016 0%, #38090e 100%);
+}
+.darkmode header nav {
+  background-color: #1f1e1d;
+}
+.darkmode header nav .nav-link {
+  color: #b42231;
+}
+.darkmode input:checked + .slider {
+  background-color: #AA3C47;
+}
+.darkmode main .container {
+  background: #1f1e1d;
+  color: #FDF8F0;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+}
+.darkmode main .container .content-left .lightver {
+  display: none;
+}
+.darkmode main .container .content-left .darkver {
+  display: block;
+}
+.darkmode main .container .content-left .info-block h1 {
+  color: #AA3C47;
+}
+.darkmode main .container .content-left .info-block p {
+  color: #FDF8F0;
+}
+.darkmode main .container .content-left .info-block form input[type=email] {
+  color: #FDF8F0;
+  border: 1px solid black;
+  background-color: black;
+}
+.darkmode main .container .content-left .info-block form input[type=email]:focus {
+  border: 1px solid #391418;
+}
+.darkmode main .container .content-left .info-block form button {
+  background: linear-gradient(90deg, #531016 0%, #38090e 100%), 20%;
+  color: white;
+  border: 1px solid black;
+}
+.darkmode main .container .content-left .info-block form button:hover {
+  cursor: pointer;
+  filter: brightness(1.1);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,5 @@
 @import 'utils/variables';
+
 *, :before, :after {
     box-sizing:border-box;
 }
@@ -50,6 +51,12 @@ main {
             padding:20px;
             .main-logo {
                 width:140px;
+            }
+            .lightver{
+                display:block;
+            }
+            .darkver {
+                display:none;
             }
             .info-block {
                 width:70%;
@@ -158,4 +165,162 @@ input:checked + .slider:before {
     -webkit-transform: translateX(28px);
     -ms-transform: translateX(28px);
     transform: translateX(28px);
+}
+
+@media (max-width: 1200px) {
+    main {
+        .container {
+            width:800px;
+            height:426px;
+            .content-left {
+                width:60%;
+                .main-logo {
+                    width:90px;
+                }
+                .info-block {
+                    h1 {
+                        font-size:2.6rem;
+                        line-height:2.8rem;
+                    }
+                    p {
+                        font-size:0.8rem;
+                    }
+                }
+            }
+            .content-right {
+                width:40%;
+                height:auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    main {
+        .container {
+            width:80%;
+            height:650px;
+            flex-flow:row-reverse wrap;
+            .content-left {
+                width:100%;
+                height:350px;
+                order:2;
+                position:relative;
+                
+                .main-logo {
+                    position:absolute;
+                    bottom:10px;
+                    right:10px;
+                }
+                .info-block {
+                    width:80%;
+                    h1 {
+                        font-size:2.4rem;
+                        margin-bottom:10px;
+                    }
+                }
+            }
+            .content-right {
+                width:100%;
+                height:300px;
+                overflow:hidden;
+                order:1;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        .container {
+            height:500px;
+            .content-left {
+                height:300px;
+                padding:30px 15px;
+                .main-logo {
+                    width:80px;
+                }
+                .info-block {
+                    margin:0 auto;
+
+                    h1 {
+                        font-size:1.4rem;
+                        line-height:120%;
+                    }
+                    p {
+                        font-size:0.7rem;
+                    }
+                    form {
+                        margin-top:10px;
+                    }
+                }
+            }
+            .content-right {
+                height:200px;
+                
+            }
+        }
+    }
+}
+
+//DARKMODE
+.darkmode {
+        background:$dark-red-gradient;
+    header {
+        nav {
+            background-color:$backblack;
+            .nav-link {
+                color:lighten($darkred, 10%);
+            }
+    
+        }
+    }
+    // DARK MODE TOGGLER
+    input:checked + .slider {
+        background-color:$main-red;
+    }
+    main {
+        .container {
+            background:$backblack;
+            color:$offwhite;
+            box-shadow:$layout-sdw;
+            .content-left {
+                .lightver{
+                    display:none;
+                }
+                .darkver {
+                    display:block,
+                }
+                .info-block {
+                    h1 {
+                        color:$main-red;
+                    }
+                    p {
+                        color:$offwhite;
+                    }
+                    form {
+
+                        input[type=email] {
+                            color:$offwhite;
+                            border:1px solid darken($main-red, 50%);
+                            background-color:black;
+                            &:focus {
+                                border:1px solid darken($main-red, 30%);
+                            }
+                        }
+                        button {
+                            background:$dark-red-gradient, 20%;
+                            color:white;
+                            border:1px solid black;
+                            &:hover {
+                                cursor: pointer;
+                                filter:brightness(1.1);
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
 }
